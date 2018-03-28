@@ -1,15 +1,13 @@
 class Museum
   attr_reader :name,
-              :exhibit,
-              :cost
+              :exhibit
   def initialize(name)
     @name = name
     @exhibit =[]
-    @cost = []
   end
 
   def add_exhibit(exhibit, cost)
-    @exhibit << exhibit + cost.to_s
-    # @cost << cost
+    @exhibit << exhibit
+    @exhibit << cost
   end
 end

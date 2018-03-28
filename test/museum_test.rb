@@ -19,8 +19,8 @@ class MuseumTest < Minitest::Test
     dmns.add_exhibit("Dead Sea Scrolls", 10)
     dmns.add_exhibit("Gems and Minerals", 0)
 
-    binding.pry
+    # binding.pry
     result = ["Dead Sea Scrolls", 10, "Gems and Minerals", 0]
-    assert_equal result, dmns.exhibit.cost
+    assert_equal result, dmns.exhibit
   end
 end

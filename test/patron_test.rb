@@ -6,6 +6,7 @@ require 'pry'
 class PatronTest < Minitest::Test
   def test_it_exists
     bob = Patron.new("Bob")
+    assert_instance_of Patron, bob
   end
 
   def test_it_has_a_name
@@ -22,8 +23,9 @@ class PatronTest < Minitest::Test
     bob = Patron.new("Bob")
     bob.add_interest("Dead Sea Scrolls")
     bob.add_interest("Gems and Minerals")
-    
+
     result = ["Dead Sea Scrolls", "Gems and Minerals"]
+    binding.pry
     assert_equal result, bob.interests
   end
 end

@@ -1,6 +1,6 @@
 class Patron
-  attr_reader :name,
-              :interests
+  attr_reader   :name
+  attr_accessor :interests
   def initialize(name)
     @name = name
     @interests = []

@@ -1,6 +1,7 @@
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/museum'
+require './lib/patron'
 require 'pry'
 
 class MuseumTest < Minitest::Test
@@ -22,5 +23,18 @@ class MuseumTest < Minitest::Test
     # binding.pry
     result = ["Dead Sea Scrolls", 10, "Gems and Minerals", 0]
     assert_equal result, dmns.exhibit
+  end
+
+  def test_revenue_starts_at_0
+    dmns = Museum.new("Denver Museum of Nature and Science")
+
+    assert_equal 0, dmns.revenue
+  end
+
+  def test_general_admittance_is_10_dollars
+    dmns = Museum.new("Denver Museum of Nature and Science")
+    bob = Patron.new("Bob")
+
+    assert_equal 10, dmns.revenue
   end
 end

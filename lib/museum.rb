@@ -10,4 +10,13 @@ class Museum
     @exhibit << exhibit
     @exhibit << cost
   end
+
+  def revenue
+    cost = 0
+    if @name
+      cost
+    elsif Patron.new
+      cost += 10
+    end
+  end
 end

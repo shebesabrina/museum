@@ -1,9 +1,12 @@
+require_relative './patron'
 class Museum
   attr_reader :name,
-              :exhibit
+              :exhibit,
+              :cost
   def initialize(name)
     @name = name
     @exhibit =[]
+    @cost = 0
   end
 
   def add_exhibit(exhibit, cost)
@@ -12,11 +15,11 @@ class Museum
   end
 
   def revenue
-    cost = 0
-    if @name
-      cost
-    elsif Patron.new
-      cost += 10
+    if @exhibit.empty?
+      @cost
+      # binding.pry
+    elsif @exhibit.any?(interests)
+      @cost += 10
     end
   end
 end

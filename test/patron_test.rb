@@ -25,7 +25,7 @@ class PatronTest < Minitest::Test
     bob.add_interest("Gems and Minerals")
 
     result = ["Dead Sea Scrolls", "Gems and Minerals"]
-    binding.pry
+
     assert_equal result, bob.interests
   end
 end

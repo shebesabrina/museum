@@ -35,7 +35,7 @@ class MuseumTest < Minitest::Test
     dmns = Museum.new("Denver Museum of Nature and Science")
     bob = Patron.new("Bob")
     bob.add_interest("Gems and Minerals")
-    # binding.pry
+
     assert_equal 10, dmns.revenue
   end
 end

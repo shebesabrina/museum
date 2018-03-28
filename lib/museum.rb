@@ -17,7 +17,6 @@ class Museum
   def revenue
     if @exhibit.empty?
       @cost
-      # binding.pry
     elsif @exhibit.any?(interests)
       @cost += 10
     end
